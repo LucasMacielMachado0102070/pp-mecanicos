@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="menu.css" />
+    <title>Menu</title>
+  </head>
+  <body>
+    
+    <div class="pesquisa-container">
+      <input type="text" placeholder="Pesquisar..." id="pesquisa-input" />
+      <button type="button" id="pesquisa-button">Buscar</button>
+    </div>
+    <div id="btnModal">
+      <button id="myBtn">Adicionar Produtos</button>
+    </div>
+
+      <div id="myModal" class="modal">
+ 
+        <div class="modal-content">
+          <div>
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <input class="nome1" type="text" id="nome"/>
+            <input class="nome2" type="number" id="valor" />
+            <input class="escolher-ficheiro" type="file" id="file" placeholder="imagem"/>
+            <button  class="cadastrar-model" onclick="cadastrar(event)">Cadastrar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <input type="text" id="nome" />
+      <input type="number" id="valor" />
+      <input type="file" id="file" />
+      <button onclick="cadastrar(event)">Cadastrar</button> -->
+    
+    <div class="menu-container">
+      <div class="cards-container" id="cards">
+        <!-- <div class="card">
+                Tensor da Correia Dentada
+                <img src="../Imagens/Tensor de Carreia Dentada.png" alt="Tensor de Carreia Dentada">
+            </div>
+            <div class="card">
+                Tensor da Correia Dentada
+                <img src="../Imagens/Mobil Super 5W 40 API SN.png" alt="Tensor de Carreia Dentada">
+            </div>
+            <div class="card">
+                Tensor da Correia Dentada
+                <img src="../Imagens/Tensor de Carreia Dentada.png" alt="Tensor de Carreia Dentada">
+            </div>
+            <div class="card">
+                Tensor da Correia Dentada
+                <img src="../Imagens/Tensor de Carreia Dentada.png" alt="Tensor de Carreia Dentada">
+            </div>
+            
+            <div class="card">
+                Tensor da Correia Dentada
+                <img src="../Imagens/Tensor de Carreia Dentada.png" alt="Tensor de Carreia Dentada">
+            </div>
+            <div class="card">
+                Tensor da Correia Dentada
+                <img src="../Imagens/Tensor de Carreia Dentada.png" alt="Tensor de Carreia Dentada">
+            </div>
+            <div class="card">
+                Tensor da Correia Dentada
+                <img src="../Imagens/Tensor de Carreia Dentada.png" alt="Tensor de Carreia Dentada">
+            </div> -->
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

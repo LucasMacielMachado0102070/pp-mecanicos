@@ -1,0 +1,222 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 3em;
+  margin: 0;
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+}
+
+/* -----------------------CARDS--------------------------- */
+.menu-container {
+  text-align: center;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #e0e0e0;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 20vh;
+  width: 10vw;
+}
+
+.card img {
+  max-width: 100%;
+  height: 120px;
+  position: absolute;
+  margin-top: 35px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* -----------------------CARDS--------------------------- */
+
+/* --------------------BARRA DE PESQUISA------------------ */
+
+.pesquisa-container {
+  margin-top: -10em;  
+  display: flex;
+  background-color: whitesmoke;
+  padding: 8px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#pesquisa-input {
+  border: none;
+  padding: 10px;
+  border-radius: 50px 0 0 50px;
+  outline: none;
+  font-size: 16px;
+  width: 250px;
+}
+
+#pesquisa-button {
+  border: none;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#pesquisa-button:hover {
+  background-color: #0056b3;
+}
+
+/* ---------------------BARRA DE PESQUISA--------------------- */
+#myBtn{
+    width: 100%;
+    padding: 10px;
+    background-color: #A9A9A9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: left;
+    margin-top: -1.7em;
+}
+
+.close{
+  margin-top: -8px;
+  display: flex;
+
+}
+
+.nome1{
+    width: 80%;
+    padding: 5px;
+    background-color: #cfcfcf;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-size: 13.7px;
+    border-color: #000;
+    
+}
+
+.nome2{
+    width: 80%;
+    padding: 5px;
+    background-color: #cfcfcf;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-size: 13.7px;
+    border-color: #000;
+}
+
+.escolher-ficheiro{
+  width: 36%;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer; 
+  cursor: pointer;
+  color: black;
+  font-size: 13.7px;
+  background-color: transparent;  
+}
+
+.cadastrar-model{
+    width: 22.5%;
+    padding: 8px;
+    background-color: #A9A9A9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-size: 13.7px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 27%;
+  gap: 0.3em;
+  /* background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 27%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  align-items: center;
+  box-shadow: 0px 4px 11px 0px rgba(0, 0, 17, 1); */
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body .escolher-ficheiro{
+  outline: #000;
+  
+}
+
+.modal-body > * {
+  margin-top: 10px;
+}
+
+input[type='file'] {
+  color: rgba(0, 0, 0, 0);
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}

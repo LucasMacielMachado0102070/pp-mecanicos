@@ -12,14 +12,23 @@
         <form action="" method="post">
             <div class="input-group">
                 <label for="username">Nome:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="nome" name="username" required>
             </div>
             <div class="input-group">
                 <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="senha" name="password" required>
             </div>
-            <a class="a1-login" type="submit" href="menu.html">Entrar</a>
+            <button type="button" id="handleSubmit" class="send"> 
+                    Entrar
+            </button>
+            <!-- <a class="a1-login" type="submit" href="../Tela-Menu/menu.html">Entrar</a> -->
         </form>
     </div>
+
+    <script src="./script.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
