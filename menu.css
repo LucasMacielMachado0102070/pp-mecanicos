@@ -42,7 +42,8 @@ body {
 /* -----------------------CARDS--------------------------- */
 
 /* --------------------BARRA DE PESQUISA------------------ */
-.search-container {
+
+.pesquisa-container {
     display: flex;
     align-items: center;
     background-color: white;
