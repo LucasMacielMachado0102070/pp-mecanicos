@@ -6,30 +6,32 @@
     <link rel="stylesheet" href="menu.css" />
     <title>Menu</title>
   </head>
+  
   <body>
+    <header>
+      <div id="btnModal">
+        <button id="myBtn">Adicionar Produtos</button>
+      </div>
     
-    <div class="pesquisa-container">
-      <input type="text" placeholder="Pesquisar..." id="pesquisa-input" />
-      <button type="button" id="pesquisa-button">Buscar</button>
-    </div>
-    <div id="btnModal">
-      <button id="myBtn">Adicionar Produtos</button>
-    </div>
-
-      <div id="myModal" class="modal">
- 
-        <div class="modal-content">
-          <div>
-            <span class="close">&times;</span>
-          </div>
-          <div class="modal-body">
-            <input class="nome1" type="text" id="nome"/>
-            <input class="nome2" type="number" id="valor" />
-            <input class="escolher-ficheiro" type="file" id="file" placeholder="imagem"/>
-            <button  class="cadastrar-model" onclick="cadastrar(event)">Cadastrar</button>
+        <div id="myModal" class="modal">
+    
+          <div class="modal-content">
+            <div>
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+              <input class="nome1" type="text" id="nome"/>
+              <input class="nome2" type="number" id="valor" />
+              <input class="escolher-ficheiro" type="file" id="file" placeholder="imagem"/>
+              <button  class="cadastrar-model" onclick="cadastrar(event)">Cadastrar</button>
+            </div>
           </div>
         </div>
-      </div>
+    </header>
+    <!-- <div class="pesquisa-container">
+      <input type="text" placeholder="Pesquisar..." id="pesquisa-input" />
+      <button type="button" id="pesquisa-button">Buscar</button>
+    </div> -->
 
       <!-- <input type="text" id="nome" />
       <input type="number" id="valor" />
@@ -69,6 +71,16 @@
             </div> -->
       </div>
     </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+          <p>&copy; 2024 Lucas Maciel Machado</p>
+          <a href="#">Política de Privacidade</a> | 
+          <a href="#">Termos de Uso</a> | 
+          <a href="#">Contato</a> | 
+          <a href="/front/index.html">Sair</a>
+      </div>
+  </footer>
 
     <script src="./script.js"></script>
   </body>

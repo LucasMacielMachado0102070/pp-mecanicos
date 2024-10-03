@@ -42,15 +42,15 @@ async function produtos(request, response) {
 }
 async function getProdutosById(request, response) {
   const params = Array(request.params.id);
-  console.log(params)
-  const query = "select * from produtos where id = ?"
+
+  const query = "SELECT * FROM produtos where id = ?"
 
   connection.query(query, params, (err, results) => {
-    console.log(err, results)
+
     if(results.length > 0) {
       response.status(200).json({
         success: true,
-        data: results,
+        data: results[0],
         message: "Sucesso!"
       })  
     } else {

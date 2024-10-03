@@ -6,6 +6,6 @@ const { salvarProduto, produtos, getProdutosById } = require('../controller/Prod
 router.post('/produto/salvar', upload.single('file'), salvarProduto);
 router.get('/produtos', produtos);
 
-router.get('/get/produtos/detalhes/:id', getProdutosById);
+router.get('/produtos/detalhes/:id', getProdutosById);
 
 module.exports = router;
