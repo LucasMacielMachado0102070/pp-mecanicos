@@ -111,7 +111,7 @@ async function getComparacaoProdutos(produto) {
 var modal = document.getElementById("myModal");
 
 // Obtenha o botão que abre o modal
-// var btn = document.getElementById("myBtn");
+ var btn = document.getElementById("myBtn");
 
 // Obtenha o elemento <span> que fecha o modal
 var span = document.getElementsByClassName("close")[0];

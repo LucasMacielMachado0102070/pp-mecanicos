@@ -59,6 +59,25 @@ h2{
   padding: 1vh;
   width: 17vw;
   text-align: center;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.Button-Peça_Detalhes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1vh 2vw;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: gray; /* Cor de fundo preta */
+  border: 2px solid #A9A9A9; /* Borda cinza */
+  border-radius: 8px; /* Bordas arredondadas */
+  text-decoration: none; /* Remove o sublinhado */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  height: 11vh;
+  width: 52vw;
 }
 
 .p2-oleo {
