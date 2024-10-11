@@ -49,7 +49,7 @@ if (window.location.href === "http://127.0.0.1:5500/Tela-Menu/menu.html") {
         console.log(produto)
         cards.innerHTML += `<div class="card" onclick="getComparacaoProdutos(${produto.id}) ">
                   <h3>${produto.nome}</h3>
-                  <img src="${images}${produto.imagem}" alt="Tensor de Carreia Dentada">
+                  <img src="${images}${produto.imagem}" alt="${produto.nome}">
                   </div>`;
 
         //   card.addEventListener("click", function () {

@@ -12,6 +12,27 @@
     <div id="detalhes"></div>
 
     <div class="Links-sites">
+      <button id="myBtn">Adicionar Links dos Sites</button>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div>
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <label for="nome">Nome do Site:</label>
+            <input class="nome1" type="text" id="nome" placeholder="Digite o nome do site" required />
+      
+            <label for="id_produto">ID do Produto:</label>
+            <input class="nome2" type="number" id="id_produto" placeholder="Digite o ID do produto" required />
+      
+            <label for="link">Link do Site:</label>
+            <input class="Link" type="url" id="link" placeholder="Digite o link do site" required />
+      
+            <button class="cadastrar-model" onclick="cadastrar(event)">Cadastrar</button>
+          </div>
+        </div>
+      </div>
         <a class="Button-Peça_Detalhes" href="./PeçaDetalhes.html">
         <p>Detalhes da Peça</p></a>
         

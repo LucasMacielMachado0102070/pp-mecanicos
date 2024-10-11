@@ -1,285 +1,248 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+* {
+	font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  justify-content: space-between;
-  height: 100vh;
-  gap: 3em;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f2f5;
-  font-family: Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	gap: 3em;
+	margin: 0;
+	padding: 0;
+	background-color: #f0f2f5;
+	font-family: Arial, sans-serif;
 }
 
 .header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+	background-color: #333;
+	color: white;
+	padding: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .logo h1 {
-  font-size: 24px;
+	font-size: 24px;
 }
 
 .navbar ul {
-  list-style: none;
-  display: flex;
+	list-style: none;
+	display: flex;
 }
 
 .navbar ul li {
-  margin-left: 20px;
+	margin-left: 20px;
 }
 
 .navbar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s ease;
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
-  color: gray;
+	color: gray;
 }
 
 /* -----------------------CARDS--------------------------- */
 .menu-container {
-  text-align: center;
+	text-align: center;
 }
 
 .cards-container {
-  display: flex;
-  /* flex-wrap: wrap; */
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	max-width: 100vw;
 }
 
 .card {
-  background-color: #e0e0e0;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column; /* Altera para coluna para alinhar a imagem e o texto verticalmente */
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  height: 28vh;
-  width: 15vw;
-  margin-top: -7em;
+	background-color: #e0e0e0;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column; /* Altera para coluna para alinhar a imagem e o texto verticalmente */
+	justify-content: center;
+	align-items: center;
+	font-size: 15px;
+	cursor: pointer;
+	transition: transform 0.2s, box-shadow 0.2s;
+	height: 28vh;
+	width: 15vw;
 }
 
 .card img {
-  max-width: 100%;
-  height: 120px;
-  margin-bottom: 20px; /* Adiciona espaço entre a imagem e o texto */
+	max-width: 100%;
+	height: 120px;
+	margin-bottom: 20px; /* Adiciona espaço entre a imagem e o texto */
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+	transform: translateY(-5px);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 /* -----------------------CARDS--------------------------- */
 
-/* --------------------BARRA DE PESQUISA------------------ */
-
-/* .pesquisa-container {
-  margin-top: -10em;  
-  display: flex;
-  background-color: whitesmoke;
-  padding: 8px;
-  border-radius: 50px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#pesquisa-input {
-  border: none;
-  padding: 10px;
-  border-radius: 50px 0 0 50px;
-  outline: none;
-  font-size: 16px;
-  width: 250px;
-}
-
-#pesquisa-button {
-  border: none;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border-radius: 0 50px 50px 0;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#pesquisa-button:hover {
-  background-color: #0056b3;
-} */
-
-/* ---------------------BARRA DE PESQUISA--------------------- */
-#myBtn{
-    width: 100%;
-    padding: 8px;
-    background-color: #A9A9A9;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 15px;
-    text-align: left;
-    margin-top: 30px;
-}
-
-.close{
-  margin-top: -8px;
-  display: flex;
-
-}
-
-.nome1{
-    width: 80%;
-    padding: 5px;
-    background-color: #cfcfcf;
-    border-radius: 5px;
-    cursor: pointer;
-    color: black;
-    font-size: 13.7px;
-    border-color: #000;
-    
-}
-
-.nome2{
-    width: 80%;
-    padding: 5px;
-    background-color: #cfcfcf;
-    border-radius: 5px;
-    cursor: pointer;
-    color: black;
-    font-size: 13.7px;
-    border-color: #000;
-}
-
-.escolher-ficheiro{
-  width: 36%;
-  padding: 8px;
-  border-radius: 5px;
-  cursor: pointer; 
-  cursor: pointer;
-  color: black;
-  font-size: 13.7px;
-  background-color: transparent;  
-}
-
-.cadastrar-model{
-    width: 22.5%;
-    padding: 8px;
-    background-color: #A9A9A9;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: black;
-    font-size: 13.7px;
-}
-
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0, 0, 0); 
-  background-color: rgba(0, 0, 0, 0.4); 
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 27%;
-  gap: 0.3em;
-}
-
-.modal-body {
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.modal-body .escolher-ficheiro{
-  outline: #000;
-  
-}
-
-.modal-body > * {
-  margin-top: 10px;
-}
-
-input[type='file'] {
-  color: rgba(0, 0, 0, 0);
+#myBtn {
+	display: flex;
+	width: 12.6vw;
+	padding: 8px;
+	background-color: #a9a9a9;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 15px;
+	text-align: left;
 }
 
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+	margin-top: -8px;
+	display: flex;
+}
+
+.nome1 {
+	width: 80%;
+	padding: 5px;
+	background-color: #cfcfcf;
+	border-radius: 5px;
+	cursor: pointer;
+	color: black;
+	font-size: 13.7px;
+	border-color: #000;
+}
+
+.nome2 {
+	width: 80%;
+	padding: 5px;
+	background-color: #cfcfcf;
+	border-radius: 5px;
+	cursor: pointer;
+	color: black;
+	font-size: 13.7px;
+	border-color: #000;
+}
+
+.escolher-ficheiro {
+	width: 36%;
+	padding: 8px;
+	border-radius: 5px;
+	cursor: pointer;
+	cursor: pointer;
+	color: black;
+	font-size: 13.7px;
+	background-color: transparent;
+}
+
+.cadastrar-model {
+	width: 25%;
+	padding: 8px;
+	background-color: #a9a9a9;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	color: black;
+	font-size: 13.7px;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 27%;
+	gap: 0.3em;
+}
+
+.modal-body {
+	display: flex;
+	flex-direction: column;
+}
+
+.modal-body .escolher-ficheiro {
+	outline: #000;
+}
+
+.modal-body > * {
+	margin-top: 10px;
+}
+
+input[type="file"] {
+	color: rgba(0, 0, 0, 0);
+}
+
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 /* -----------FOOTER--------------- */
 
 .footer {
-  background-color: #A9A9A9;
-  padding: 1.9vh 0vh;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+	background-color: #a9a9a9;
+	padding: 1.9vh 0vh;
+	text-align: center;
+	position: relative;
+	bottom: 0;
+	width: 100%;
 }
 
 .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  color: #fff;
+	max-width: 1200px;
+	margin: 0 auto;
+	color: #fff;
 }
 
 .footer a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
+	color: #fff;
+	text-decoration: none;
+	margin: 0 10px;
 }
 
 .footer a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .footer p {
-  margin: 0;
-  padding: 10px 0;
+	margin: 0;
+	padding: 10px 0;
 }
 
 @media screen and (max-width: 600px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-    }
+	.cards-container {
+		grid-template-columns: 1fr;
+	}
 }

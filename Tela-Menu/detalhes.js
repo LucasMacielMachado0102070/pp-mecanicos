@@ -52,3 +52,44 @@ document.addEventListener('DOMContentLoaded', function(){
     // }
 
 })
+
+// Abrir e fechar o modal
+const modal = document.getElementById("myModal");
+const btn = document.getElementById("myBtn");
+const span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+// Função de cadastro
+function cadastrar(event) {
+  event.preventDefault();
+
+  const nome = document.getElementById("nome").value;
+  const id_produto = document.getElementById("id_produto").value;
+  const link = document.getElementById("link").value;
+
+  if (nome && id_produto && link) {
+    // Aqui você pode enviar os dados para o backend ou realizar a lógica de cadastro
+    alert(`Produto cadastrado:\nNome: ${nome}\nID do Produto: ${id_produto}\nLink: ${link}`);
+    
+    // Limpar campos e fechar modal
+    document.getElementById("nome").value = "";
+    document.getElementById("id_produto").value = "";
+    document.getElementById("link").value = "";
+    modal.style.display = "none";
+  } else {
+    alert("Por favor, preencha todos os campos.");
+  }
+}

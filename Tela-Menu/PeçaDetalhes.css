@@ -55,31 +55,53 @@
     color: gray;
   }
 
-/* PeçaDetalhes.css */
+#Oleo-img {
+  height: auto;
+  max-width: 100px; /* Ajuste a largura máxima conforme necessário */
+  vertical-align: middle; /* Alinha a imagem com o texto */
+  margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.p-Info-peça a {
+  color: #000; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado do link */
+  font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.p-Info-peça {
+  padding: 20px;
+  display: flex;
+  align-items: center; /* Alinha a imagem e o texto verticalmente */
+}
+
 #peca-detalhes {
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #efefef; /* Cor de fundo suave */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar o conteúdo */
+  max-width: 50vw; /* Largura máxima para limitar o tamanho do bloco */
 }
 
-#Fastcar-img{
-  height: 5vh;
+#peca-detalhes h3 {
+  font-size: 1.5rem; /* Tamanho maior para o título */
+  color: #333; /* Cor do título */
+  margin-bottom: 10px; /* Espaçamento entre o título e o parágrafo */
+  font-weight: bold;
 }
 
-.p2-descriçao_peça{
-  color: black;
-  
+.p2-descriçao_peça {
+  font-size: 1rem; /* Tamanho da fonte para o parágrafo */
+  line-height: 1.6; /* Aumenta o espaçamento entre linhas para facilitar a leitura */
+  color: #555; /* Cor do texto */
+  text-align: justify; /* Justifica o texto */
 }
+
 
 h2{
-    margin-top: -170px;
     font-size: 28px;
     color: #333;
     margin-bottom: -10px;
-    padding: 20px;
-}
-
-.p-Info-peça{
     padding: 20px;
 }
 

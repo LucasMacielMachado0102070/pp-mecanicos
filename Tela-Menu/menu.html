@@ -12,19 +12,15 @@
 
       <div class="logo">
         <h1>Mecanicos e CIA</h1>
-    </div>
-    <nav class="navbar">
+      </div>
+      <nav class="navbar">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="./menu.html">Home</a></li>
+            <li><a href="./Sobre.html">Sobre</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
-    </nav>
-
-      <div id="btnModal">
+      </nav>
         <button id="myBtn">Adicionar Produtos</button>
-      </div>
     
         <div id="myModal" class="modal">
     
@@ -33,8 +29,10 @@
               <span class="close">&times;</span>
             </div>
             <div class="modal-body">
-              <input class="nome1" type="text" id="nome"/>
-              <input class="nome2" type="number" id="valor" />
+              <label for="nome">Nome da Peça:</label>
+              <input class="nome1" type="text" id="nome" placeholder="Digite o nome do produto" required />
+              <label for="nome">Preço do Produto:</label>
+              <input class="nome2" type="number" id="valor" placeholder="Digite o valor do produto" required />
               <input class="escolher-ficheiro" type="file" id="file" placeholder="imagem"/>
               <button  class="cadastrar-model" onclick="cadastrar(event)">Cadastrar</button>
             </div>
@@ -87,7 +85,7 @@
 
     <footer class="footer">
       <div class="footer-content">
-          <p>&copy; 2024 Lucas Maciel Machado</p>
+          <p>2024 Lucas Maciel Machado</p>
           <a href="#">Política de Privacidade</a> | 
           <a href="#">Termos de Uso</a> | 
           <a href="#">Contato</a> | 
