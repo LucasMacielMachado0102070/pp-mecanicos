@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { criarDominio,listarDominios,atualizarDominio,deletarDominio } = require('../controller/DominioController');
+const { criarDominio,getDominiosById,atualizarDominio,deletarDominio } = require('../controller/DominioController');
 
 /**
 * @swagger
@@ -38,7 +38,9 @@ router.post('/dominios', criarDominio);
 */
 
 // Rota para listar todos os domínios
-router.get('/dominios', listarDominios);
+router.get('/dominios/:id', getDominiosById);
+
+
 
 /**
 * @swagger

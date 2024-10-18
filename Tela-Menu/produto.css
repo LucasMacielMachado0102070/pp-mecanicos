@@ -16,6 +16,26 @@ body {
   gap: 3em;
 }
 
+.botao-voltar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 10px;
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 20px;
+  transition: background-color 0.3s ease;
+  height: 7vh;
+}
+
+.botao-voltar:hover {
+  background-color: #333;
+}
+
 #myModal{
   display: flex;
   justify-content: right;
@@ -50,7 +70,7 @@ body {
 }
 
 .cadastrar-model {
-  width: 25%;
+  width: 28%;
   padding: 8px;
   background-color: #a9a9a9;
   border: none;

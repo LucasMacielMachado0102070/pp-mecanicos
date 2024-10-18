@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     content.forEach(produto => {
         console.log(produto)
+        localStorage.setItem("produtoId",produto.id);
         detalhesMain.innerHTML += `
               <card class="card" class="card img">
                   <h2>${produto.nome}</h2>
@@ -19,37 +20,40 @@ document.addEventListener('DOMContentLoaded', function(){
               </card>`
     });
 
-    // const urlParams = new URLSearchParams(window.location.search);
+    //Estamos implementando a listagem dos dominios(links de venda da internet), porém não deu tempo.
+    //Precisa pegar por parametro o id do dominio, não do produto, o id do produto será usado para buscar no bd os dominios de um produto especifico
+    const produtoId = localStorage.getItem('produtoId');
+    console.log(produtoId);
+    if(produtoId) {
+        fetch(`http://localhost:3004/api/dominios/${produtoId}`)
+        .then(response => response.json())
+        .then(data => {
+            if(data.success) {
+              console.log("Deu certo")
+              console.log(data.success)
+                const detalhesMain = document.getElementById("detalhes")
+                detalhesMain.innerHTML = 
+                `
+                <card class="card" class="card img">
+                    <h2 >${data.data.nome}</h2>
+                    <img id="produto" src="http://localhost:3004/uploads/${data.data.imagem}">
+                    <p>valor: ${data.data.valor}</p>
+                </card>
 
-    // const produtosId = urlParams.get("id")
+                <section>
+                <div>Mecanica:</div>
+                <div>Mecanica:</div>
+                </section>
 
-    // if(produtosId) {
-    //     fetch(`http://localhost:3004/api/get/produtos/detalhes/${produtosId}`)
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         if(data.success) {
-    //             const detalhesMain = document.getElementById("detalhes")
-    //             detalhesMain.innerHTML = 
-    //             `
-    //             <card class="card" class="card img">
-    //                 <h2 >${data.data.nome}</h2>
-    //                 <img id="produto" src="http://localhost:3004/uploads/${data.data.imagem}">
-    //                 <p>valor: ${data.data.valor}</p>
-    //             </card>
+                `
+            } else {
+              console.log("Deu errado")
+                // const detalhesMain = document.getElementById("detalhes")
+                // detalhesMain.innerHTML = `Não há produto!`
+            }
+        })
 
-    //             <section>
-    //             <div>Mecanica:</div>
-    //             <div>Mecanica:</div>
-    //             </section>
-
-    //             `
-    //         } else {
-    //             const detalhesMain = document.getElementById("detalhes")
-    //             detalhesMain.innerHTML = `Não há produto!`
-    //         }
-    //     })
-
-    // }
+    }
 
 })
 

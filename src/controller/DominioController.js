@@ -14,17 +14,29 @@ async function criarDominio(request, response) {
 }
 
 // Listar todos os domínios
-async function listarDominios(request, response) {
-    const sql = "SELECT * FROM dominios";
-
-    connection.query(sql, (err, results) => {
-        if (err) {
-            return response.status(500).json({ success: false, message: "Erro ao listar domínios", error: err });
-        }
-        response.status(200).json({ success: true, data: results });
-    });
-}
-
+async function getDominiosById(request, response) {
+    const params = Array(request.params.id);
+    console.log(params)
+    const query = "select * from dominios where id = ?"
+  
+    connection.query(query, params, (err, results) => {
+      console.log(err, results)
+      if(results.length > 0) {
+        response.status(200).json({
+          success: true,
+          data: results,
+          message: "Sucesso!"
+        })  
+      } else {
+        response.status(400).json({
+          success: false,
+          message: "Erro!",
+          sql: err
+        })
+      }
+    })
+  }
+  
 // Atualizar um domínio
 async function atualizarDominio(request, response) {
     const { id } = request.params;
@@ -54,7 +66,7 @@ async function deletarDominio(request, response) {
 
 module.exports = {
     criarDominio,
-    listarDominios,
+    getDominiosById,
     atualizarDominio,
     deletarDominio
 };
