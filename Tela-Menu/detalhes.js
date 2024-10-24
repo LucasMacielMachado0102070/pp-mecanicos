@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function(){
                   <h2>${produto.nome}</h2>
                   <img id="produto" src="http://localhost:3004/uploads/${produto.imagem}">
                   <p>valor: ${produto.valor}</p>
-                  <a href="${produto.link}" target="_blank">Acessar</a>
               </card>`
     });
 
@@ -30,22 +29,17 @@ document.addEventListener('DOMContentLoaded', function(){
         .then(data => {
             if(data.success) {
               console.log("Deu certo")
-              console.log(data.success)
-                const detalhesMain = document.getElementById("detalhes")
-                detalhesMain.innerHTML = 
-                `
-                <card class="card" class="card img">
-                    <h2 >${data.data.nome}</h2>
-                    <img id="produto" src="http://localhost:3004/uploads/${data.data.imagem}">
-                    <p>valor: ${data.data.valor}</p>
-                </card>
-
-                <section>
-                <div>Mecanica:</div>
-                <div>Mecanica:</div>
-                </section>
-
-                `
+              console.log(data)
+                const linksSection = document.getElementById("links")
+                
+                data.data.forEach(link => {
+                  linksSection.innerHTML = 
+                  `
+                  <a href="${link.link}" class="Fastcar">${link.nome_site}</a>
+                  `
+                });
+                
+                
             } else {
               console.log("Deu errado")
                 // const detalhesMain = document.getElementById("detalhes")
@@ -77,7 +71,7 @@ window.onclick = function (event) {
 };
 
 // Função de cadastro
-function cadastrar(event) {
+async function cadastrar(event) {
   event.preventDefault();
 
   const nome = document.getElementById("nome").value;
@@ -85,6 +79,24 @@ function cadastrar(event) {
   const link = document.getElementById("link").value;
 
   if (nome && id_produto && link) {
+
+    // let data = {nome, id_produto, link}
+    // console.log(data)
+
+    // const response = await fetch('http://localhost:3004/api/dominios', {
+    //     method: "POST",
+    //     headers: {"Content-type": "application/json;charset=UTF-8"},
+    //     body: JSON.stringify(data)
+    // });
+
+    // let content = await response.json();
+
+    // if (content.success) {
+    //     alert('Sucesso');
+    // } else {
+    //     alert('Não');
+    // }
+
     // Aqui você pode enviar os dados para o backend ou realizar a lógica de cadastro
     alert(`Produto cadastrado:\nNome: ${nome}\nID do Produto: ${id_produto}\nLink: ${link}`);
     

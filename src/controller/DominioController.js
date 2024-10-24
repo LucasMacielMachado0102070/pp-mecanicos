@@ -17,7 +17,7 @@ async function criarDominio(request, response) {
 async function getDominiosById(request, response) {
     const params = Array(request.params.id);
     console.log(params)
-    const query = "select * from dominios where id = ?"
+    const query = "select * from dominios where id_produto = ?"
   
     connection.query(query, params, (err, results) => {
       console.log(err, results)
