@@ -1,58 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="produto.css">
-    <title>Document</title>
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="produto.css" />
+		<title>Document</title>
+	</head>
 
-<body>
+	<body>
 
-    <div id="detalhes"></div>
+		<div id="detalhes"></div>
 
-    <a href="./menu.html" class="botao-voltar">Voltar</a> 
+    <div class="toda-pagina">
+      <a href="./menu.html" class="botao-voltar">Voltar</a>
 
-    <div class="Links-sites">
-      <button id="myBtn">Adicionar Links dos Sites</button>
+			<a class="Button-Peça_Detalhes" href="./PeçaDetalhes.html">
+				<p>Detalhes da Peça</p></a>
 
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <div>
-            <span class="close">&times;</span>
-          </div>
-          <div class="modal-body">
-            <label for="nome">Nome do Site:</label>
-            <input class="nome1" type="text" id="nome" placeholder="Digite o nome do site" required />
-      
-            <label for="id_produto">ID do Produto:</label>
-            <input class="nome2" type="number" id="id_produto" placeholder="Digite o ID do produto" required />
-      
-            <label for="link">Link do Site:</label>
-            <input class="Link" type="url" id="link" placeholder="Digite o link do site" required />
-      
-            <button class="cadastrar-model" onclick="cadastrar(event)">Cadastrar</button>
-          </div>
-        </div>
-      </div>
-        <a class="Button-Peça_Detalhes" href="./PeçaDetalhes.html">
-        <p>Detalhes da Peça</p></a>
-        
-        <section id="detalhes" class="Links-sites_links-de-acesso">
-            <!-- <a class="Fastcar" href="https://www.fastcarbrasil.com.br/mobil-super-sintetico-d1-5w-30-1litro-aprovacao-gm?srsltid=AfmBOoriTRiVHF3cBRvsIZzZvtrJX3iSzVDGzSEuGNODkIsxwFVfIYoU">
-                <img id="Fastcar-img" src="../Imagens/Mobil-Super-5W-40-API-SN.png" alt="">
-                Fast Car Brasil
-            </a>  
-            <a class="Fastcar" href="https://npximports.com.br/products/oleo-mobil-super-5w30-sintetico-dexos-1-api-sp-1lt?srsltid=AfmBOoolCui2jQrgDb3gjhMstiAxAi1_A8GC3azskSGEiDXGlJYqTgCq">
-                <img id="Fastcar-img" src="../Imagens/Mobil-Super-5W-40-API-SN.png" alt="">
-                NPX Imports
-            </a>  -->
-        </section>
-        <section id="links">
+			<section id="detalhes" class="Links-sites_links-de-acesso">
+			</section>
 
-        </section>
+			<section class="links"></section>
     </div>
-    
-    <script src="detalhes.js"></script>
-</body>
+		<script src="detalhes.js"></script>
+	</body>
 </html>
