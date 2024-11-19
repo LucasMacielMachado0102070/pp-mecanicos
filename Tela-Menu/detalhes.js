@@ -35,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
 					});
 				} else {
 					console.log("Deu errado");
-					// const detalhesMain = document.getElementById("detalhes")
-					// detalhesMain.innerHTML = `Não há produto!`
 				}
 			});
 	}

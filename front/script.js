@@ -7,7 +7,7 @@ button.onclick = async function (e) {
     let senha = document.getElementById("senha").value;
     let data = {nome,senha}
 
-    const response = await fetch('https://pp-mecanicos.vercel.app/api/login', {
+    const response = await fetch('http://localhost:3004/api/login', {
         method: "POST",
         headers: {"Content-type": "application/json;charset=UTF-8"},
         body: JSON.stringify(data)
